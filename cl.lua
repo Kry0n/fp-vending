@@ -209,7 +209,7 @@ RegisterNetEvent("fp-vending:client:drinkcoffee", function(data)
         }, {}, {}, {}, function() -- Done
             TriggerEvent('animations:client:EmoteCommandStart', {"c"})
             showtext = true
-            TriggerServerEvent("QBCore:Server:SetMetaData", "hunger", QBCore.Functions.GetPlayerData().metadata["hunger"] + Config.CoffeeConsumeAmount)
+            TriggerServerEvent("QBCore:Server:SetMetaData", "thirst", QBCore.Functions.GetPlayerData().metadata["thirst"] + Config.CoffeeConsumeAmount)
         end)
     end
 end)
@@ -319,7 +319,7 @@ RegisterNetEvent("fp-vending:client:drinksoda", function(data)
         }, {}, {}, {}, function() -- Done
             TriggerEvent('animations:client:EmoteCommandStart', {"c"})
             showtext = true
-            TriggerServerEvent("QBCore:Server:SetMetaData", "hunger", QBCore.Functions.GetPlayerData().metadata["hunger"] + Config.ColaConsumeAmount)
+            TriggerServerEvent("QBCore:Server:SetMetaData", "thirst", QBCore.Functions.GetPlayerData().metadata["thirst"] + Config.ColaConsumeAmount)
         end)
     elseif vendingsoda == "sprunk" then
         TriggerEvent('animations:client:EmoteCommandStart', {"drink"})
@@ -331,7 +331,7 @@ RegisterNetEvent("fp-vending:client:drinksoda", function(data)
         }, {}, {}, {}, function() -- Done
             TriggerEvent('animations:client:EmoteCommandStart', {"c"})
             showtext = true
-            TriggerServerEvent("QBCore:Server:SetMetaData", "hunger", QBCore.Functions.GetPlayerData().metadata["hunger"] + Config.SprunkConsumeAmount)
+            TriggerServerEvent("QBCore:Server:SetMetaData", "thirst", QBCore.Functions.GetPlayerData().metadata["thirst"] + Config.SprunkConsumeAmount)
         end)
     end
 end)
